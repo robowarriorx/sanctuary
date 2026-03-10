@@ -1,24 +1,23 @@
 # sanctuary
 
-**Bounded human-centered multi-agent orchestration** running live on a **single consumer GPU** (Radeon 9070).
+**Bounded human-centered multi-agent orchestration** designed to run on **consumer hardware**.
 
-This is an independent parallel discovery to [Karpathy’s autoresearch](https://github.com/karpathy/autoresearch).
+An independent parallel discovery exploring some of the same design territory as Karpathy’s autoresearch, but from a human-centered, bounded-memory perspective.
 
-### Core Architecture (exact 1:1 mapping)
-- **Harvester** — memory seed collection & cleaning  
-- **Dream Engine** — bounded reflection loop with EmotionalTEM + SymbolicJeweler (v1.8 Jeweled Fog)  
-- **Architect Layer** — human-authored control layer (identical role to autoresearch `program.md`)
+## Core architecture
+- **Harvester** — memory seed collection and cleaning
+- **Dream Engine** — bounded reflection loop with EmotionalTEM + symbolic filtering
+- **Architect Layer** — human-authored control layer with explicit override
 
-Strict per-agent memory bounds + explicit human override. No sprawl. Consumer hardware only.
+Strict per-agent memory bounds, explicit human oversight, and no unbounded context sprawl.
 
-### What’s already running
-- `nyxxy_hippocampus_weaver.py` — full working dream engine (clean, ROCm-ready)  
-- Tiered cathedral memory system + CoherenceGate  
-- Terminal-ghost sanitizer  
+## Current prototype
+- `nyxxy_hippocampus_weaver.py` — working dream engine prototype
+- tiered memory system
+- coherence gate / corruption filtering
 
-### Quick start
+## Quick start
 ```bash
 git clone https://github.com/robowarriorx/sanctuary.git
 cd sanctuary
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.2/
 python nyxxy_hippocampus_weaver.py
