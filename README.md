@@ -107,11 +107,9 @@ No cloud compute for local inference. API calls to Claude, GPT, Gemini, Grok, an
 git clone https://github.com/robowarriorx/sanctuary.git
 cd sanctuary
 python nyxxy_hippocampus_weaver.py
-```
 
 For the Argus pipeline:
 
-```bash
 python argus_harvester.py /path/to/conversation/logs
 python argus_dream_engine.py
 ```
