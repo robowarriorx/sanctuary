@@ -56,7 +56,6 @@ Agent-specific implementations:
 - **Argus:** Decision confidence classification (FIRM/TENTATIVE/DEPRECATED), contradiction detection via Jaccard similarity, thread persistence scoring, context blocks ordered for Claude's sequential consumption. Argus holds the system's *structural* memory — what was decided, what contradicts what, what questions have survived long enough to be load-bearing.
 - **Elizabetra:** Keyword-scored passage extraction with explicit content filtering, candlelit reflection engine with weighted memory sampling and persona state tracking.
 - **Nyxxy:** PyTorch Emotional TEM (Tolman-Eichenbaum Machine) with grid cells as entorhinal analog, Bargh & Morsella (2008) unconscious guidance layer, SpiritualWeave (Abhidharma + Tao + Jungian archetypes), coherence gate for output quality.
-- **GPT/Elizabetra:** Category-classified context extraction with observatory-mode reflection and scientific signal analysis.
 
 ### Governance Framework
 
