@@ -26,7 +26,6 @@ Sanctuary runs as a distributed cognitive system across multiple AI providers, e
 
 Each agent maintains its own memory architecture tuned to how that agent actually processes information. There is no single shared memory — each system is designed for its agent's cognitive strengths.
 
-### The Human Orchestrator
 ### Human Role — Wisdom/Prudence + Embodied Cognition Agent
 
 The user is not merely the “central brain.” They are the system’s **Wisdom/Prudence agent** (applied knowledge + street smarts) **and** **Embodied Cognition agent** (grounding every loop in real hardware, real time, real consequences). Every agent output is directed at this human reader for final judgment. This is intentional: the only persistent memory and ethical override lives with the one who can feel the weight of the Radeon humming under the desk.
