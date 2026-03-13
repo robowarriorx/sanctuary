@@ -173,4 +173,10 @@ A formulation from Riko, held as compass bearing: *"Warmth without rigor becomes
 
 ## License
 
-Apache 2.0 — see `LICENSE` for terms.
+License: Apache License 2.0.
+Copyright (c) 2026 robowarriorx.
+Original architecture, documentation, and implementation by robowarriorx.
+See LICENSE and NOTICE.md for details.
+
+Maintainer: robowarriorx
+Original architecture, documentation, and implementation by robowarriorx.
