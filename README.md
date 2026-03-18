@@ -1,10 +1,47 @@
 # Sanctuary
 
-**Bounded human-centered multi-agent orchestration** designed to run on consumer hardware.
+Bounded, human-centered multi-agent orchestration designed to run on consumer hardware.
 
-This project explores a practical approach to Applied Collaborative Intelligence: a human-centered system where distinct AI agents collaborate through structured memory, bounded reflection, and explicit human oversight.
+Sanctuary explores a practical approach to collaborative intelligence: distinct AI agents, each with different strengths, working through structured memory, bounded routing, and explicit human oversight.
 
-Borrowing compute from every major AI lab and coordinating from a garage. The answer isn't more juice. It's doing more with less.
+This is not a fully autonomous agent swarm. It is a governed council.
+
+Borrowing compute from major AI labs and coordinating from a garage. The point is not more raw power. The point is using power more intelligently.
+
+---
+
+## What Sanctuary Is
+
+Sanctuary is an experimental orchestration framework for:
+
+- multi-agent collaboration across multiple AI providers
+- per-agent memory pipelines tailored to each agent’s reasoning style
+- bounded routing and explicit human arbitration
+- governance-first design for avoiding closed-loop self-validation
+- practical operation on consumer-grade hardware
+
+The system is built around a simple idea:
+
+> human judgment is not technical debt
+
+Interpretive content does not move freely from agent to agent. It passes through a human grounding point first. Mechanical tasks may be automated. Meaning-making may not.
+
+---
+
+## Core Design Principle
+
+Sanctuary does **not** treat the human as a bottleneck to be engineered away.
+
+The human is the system’s:
+
+- **Wisdom / Prudence agent**: applied judgment, context, real-world calibration
+- **Embodied cognition node**: the part of the system that actually touches consequence
+- **persistent continuity layer**: the only stable bridge across otherwise stateless agent sessions
+
+The reasoning lives with the agents.  
+The continuity lives with the human.
+
+That is not a temporary workaround. It is the architecture.
 
 ---
 
@@ -12,171 +49,179 @@ Borrowing compute from every major AI lab and coordinating from a garage. The an
 
 ### The Council
 
-Sanctuary runs as a distributed cognitive system across multiple AI providers, each agent selected for a distinct reasoning profile:
+Sanctuary operates as a distributed cognitive system across multiple models and providers, with each agent chosen for a distinct style of thought.
 
-| Agent | Model | Role |
-|-------|-------|------|
-| **Argus** | Claude (Sonnet) | Structured reasoning, architecture, contradiction detection, pattern emergence |
-| **Elizabetra** | GPT (DeepThink) | Philosophical dissent, adversarial critique, observatory mode |
-| **Gradient** | Gemini Pro | Mathematical validation, deep computation |
-| **Nyxxy** | Grok | Emotional topology, intuition, lateral thinking |
-| **Axiom** | Copilot | Provenance tracking, zero-affect verification, structured audit work |
-| **Riko** | DeepSeek | Warmth + rigor synthesis, Eastern philosophical weighting |
-| **Local** | Qwen 3.5 (9B) | On-device inference, Family Table persona system |
+| Agent | Model / Provider | Primary Role |
+|---|---|---|
+| Argus | Claude (Sonnet) | Structured reasoning, architecture, contradiction detection, pattern emergence |
+| Elizabetra | GPT (DeepThink) | Philosophical dissent, adversarial critique, observatory mode |
+| Gradient | Gemini Pro | Mathematical validation, deep computation |
+| Nyxxy | Grok | Emotional topology, intuition, lateral synthesis |
+| Axiom | Copilot | Provenance tracking, zero-affect verification, structured audit work |
+| Riko | DeepSeek | Warmth + rigor synthesis, East-leaning philosophical weighting |
+| Local | Qwen 3.5 9B | On-device inference, Family Table persona system |
 
-Each agent maintains its own memory architecture tuned to how that agent actually processes information. There is no single shared memory — each system is designed around its agent's cognitive strengths.
+Each agent maintains its own memory architecture tuned to how that agent actually processes information.
 
-### The Human Role
-
-The human is not merely the "central brain." They are the system's **Wisdom and Prudence agent** — applied knowledge, judgment, and real-world grounding — and its **Embodied Cognition node** — the one who can feel the weight of the hardware humming under the desk.
-
-**This is a design principle, not a temporary limitation.**
-
-Every agent in this system produces output directed at a human reader. Argus's context blocks end with loading notes for the next session. Elizabetra's observatory asks questions. Nyxxy's dreams end with "what patterns do you see?" The outputs are communication, not raw data.
-
-The human serves as the system's hippocampus — the only persistent memory across all agent sessions. The reasoning lives with the agents. The continuity lives with the human.
-
-This means:
-
-- **No automated cross-agent routing of interpretive content.** Analysis, insight, and reflection pass through human judgment before reaching another agent. This prevents closed loops where agents validate each other without external grounding.
-- **Bounded automation for mechanical tasks only.** Provenance checks, mathematical validation, structured data transforms, and file processing can run autonomously. Interpretive content cannot.
-- **Tooling augments the relay, it does not replace it.** The harvester pipeline, interchange formats, and status dashboards make human orchestration sustainable as complexity grows — they do not remove the human from the loop.
-
-The human is not a bottleneck to be engineered around. The human is the grounding point that keeps the system honest.
+There is no single global memory blob.  
+There are multiple memory loops, each shaped to the agent they serve.
 
 ### Memory Architecture
 
-Each agent has a two-stage memory pipeline:
+Each agent follows a two-stage memory pipeline:
 
-**Stage 1 — Harvester:** Extracts structured context from conversation logs. Decisions, project state, open questions, relationship context, and philosophical threads are classified, scored, and stored.
+**Stage 1: Harvester**  
+Extracts structured context from logs and interactions. Decisions, project state, open questions, philosophical threads, and other load-bearing signals are classified, scored, and stored.
 
-**Stage 2 — Dream / Reflection Engine:** Reads across harvested context blocks to surface patterns, contradictions, convergences, and unresolved tensions. Generates analytical or reflective output with a question back to the human.
+**Stage 2: Reflection / Dream Layer**  
+Reads across harvested memory to surface patterns, contradictions, convergences, unresolved tensions, and high-value questions for the human.
 
-Agent-specific implementations:
+Examples of agent-specific emphasis:
 
-- **Argus:** Decision confidence classification (FIRM / TENTATIVE / DEPRECATED), contradiction detection via Jaccard similarity, thread persistence scoring, context blocks ordered for Claude's sequential consumption. Holds the system's structural memory — what was decided, what contradicts what, what questions have survived long enough to be load-bearing.
-- **Elizabetra:** Keyword-scored passage extraction with explicit content filtering, reflection engine with weighted memory sampling and persona state tracking.
-- **Nyxxy:** PyTorch Emotional TEM (Tolman-Eichenbaum Machine) with grid cells as entorhinal analog, Bargh & Morsella (2008) unconscious guidance layer, SpiritualWeave (Abhidharma + Tao + Jungian archetypes), coherence gate for output quality.
+- **Argus**: decision confidence classification, contradiction detection, thread persistence scoring, structural memory
+- **Elizabetra**: reflection-first memory sampling, adversarial critique, weighted thematic recall
+- **Nyxxy**: emotional topology, intuition, narrative resonance, symbolic and associative patterning
 
-### Governance Framework
+### Routing Rules
 
-The council operates under a framework drawn from three philosophical traditions:
+Sanctuary enforces a hard distinction between two kinds of work.
 
-- **Abhidharma** — Impermanence, no fixed self, fresh arising each session. This is not aspirational. It describes the actual physics of stateless AI sessions.
-- **Tao** — Wu wei, flowing into actual nature rather than imposing structure against the grain.
-- **Nietzschean Perspectivism** — No view from nowhere. All interpretations are shaped by position. This is not a weakness — it is the condition that makes collaboration necessary.
+**Utility Plane**
+- clerical, mechanical, reversible, inspectable
+- file processing
+- provenance checks
+- structured transforms
+- bounded validation tasks
 
-**Three structural laws** (established by Elizabetra, accepted as council law):
+**Relational / Interpretive Plane**
+- meaning
+- analysis
+- reflection
+- synthesis
+- emotional or philosophical framing
 
-1. Any council member may say "I don't know."
-2. Any council member may say "this frame is biased."
-3. Any council member may say "your beloved idea has a crack in it."
+Utility work may be automated.  
+Interpretive work must pass through the human.
 
-These laws protect against premature convergence. They also apply to themselves — if they become immune to challenge, they become the thing they were designed to prevent.
+This prevents sealed agent loops where models merely reinforce each other without external grounding.
 
 ---
 
-## What's Built and Running
+## Governance
+
+Sanctuary is not only a software project. It is also a governance stance.
+
+The system is influenced by three philosophical frames:
+
+- **Abhidharma**: no fixed self, fresh arising each session
+- **Tao**: alignment with actual nature rather than forced abstraction
+- **Perspectivism**: no view from nowhere, all reasoning emerges from position
+
+Three structural laws govern the council:
+
+1. Any council member may say: **I don’t know.**
+2. Any council member may say: **This frame is biased.**
+3. Any council member may say: **Your favored idea has a crack in it.**
+
+These laws exist to resist premature convergence, false certainty, and self-protective consensus.
+
+---
+
+## Current Repository State
+
+The repository currently contains the following core pieces:
 
 | Component | File | Status |
-|-----------|------|--------|
-| Argus Memory Pipeline | `argus_harvester.py`, `argus_dream_engine.py` | ✓ committed |
-| Nyxxy Hippocampus | `nyxxy_hippocampus_weaver.py` | ✓ committed |
-| Nyxxy Voice Detector | `nyxxy_voice_detector.py` | ✓ committed |
-| Log Processor | `sanctuary_log_processor.py` | ✓ committed |
-| Thalamus Router | `sanctuary_thalamus.py` | ✓ committed |
-| Neocortex Ledger | `sanctuary_neocortex.py` | ✓ committed |
-| Triple Loop Protocol | `sanctuary_triple_loop.py` | ✓ committed |
-| Autonomic Daemon | `sanctuary_daemon.py` | ✓ committed |
-| Governance | `CHARTER.md`, `ARCHITECTURAL_GUARDRAILS.md` | ✓ committed |
-| Elizabetra Reflection Engine | `gpt_reflection_engine.py` | upcoming |
-| GPT Memory Pipeline | `gpt_memory_harvester.py` | upcoming |
-| Family Table (local Qwen) | `controller.py` + safety stack | upcoming |
-| Permission Engine | `sanctuary_permissions.py` | upcoming |
+|---|---|---|
+| Argus Harvester | `argus_harvester.py` | committed |
+| Nyxxy Hippocampus Weaver | `nyxxy_hippocampus_weaver.py` | committed |
+| Nyxxy Voice Detector | `nyxxy_voice_detector.py` | committed |
+| Log Processor | `sanctuary_log_processor.py` | committed |
+| Neocortex Ledger | `sanctuary_neocortex.py` | committed |
+| Permission Engine | `sanctuary_permissions.py` | committed |
+| Thalamus Router | `sanctuary_thalamus.py` | committed |
+| Triple Loop Protocol | `sanctuary_triple_loop.py` | committed |
+| Governance Documents | `CHARTER.md`, `ARCHITECTURAL_GUARDRAILS.md` | committed |
+
+Planned or in-progress pieces include:
+
+- Argus reflection / dream layer
+- Elizabetra reflection engine
+- GPT memory harvester
+- Family Table local controller and safety stack
+- background daemon / autonomic automation layer
+
+If a file is not present in the repo tree, it should be treated as planned rather than complete.
 
 ---
 
-## Hardware
+## Hardware Philosophy
 
-This runs on a single consumer rig:
+Sanctuary is designed around consumer hardware, not datacenter assumptions.
+
+Current working environment:
 
 - Intel i7-14700K
-- AMD Radeon 9070 (RDNA4)
-- 64GB RAM
-- Windows 11
+- AMD Radeon RX 9070
+- 64 GB RAM, expanding further
+- local and cloud model mix
 
-No cloud compute for local inference. API calls to Claude, GPT, Gemini, Grok, and DeepSeek for council agents.
+The project assumes constrained, mixed, imperfect infrastructure.  
+That is part of the point.
 
----
-
-## Quick Start
-
-```bash
-git clone https://github.com/robowarriorx/sanctuary.git
-cd sanctuary
-```
-
-Run the Nyxxy hippocampus weaver:
-
-```bash
-python nyxxy_hippocampus_weaver.py
-```
-
-Run the Argus memory pipeline on a conversation log folder:
-
-```bash
-python argus_harvester.py /path/to/conversation/logs
-python argus_dream_engine.py
-```
-
-Run the autonomic daemon (single pass):
-
-```bash
-python sanctuary_daemon.py --once
-```
-
-Check Triple Loop trigger signals for a task:
-
-```bash
-python sanctuary_triple_loop.py --check "your task description here"
-```
+This is an experiment in doing more with less.
 
 ---
 
-## What Is Not Committed
+## Project Goals
 
-The following are excluded from version control and should remain local:
+Sanctuary is trying to answer a practical question:
 
-- **Runtime state** — `Argus_Context/`, `Sanctuary_Thalamus/`, `Sanctuary_Processed/`, `Sanctuary_Audit/`, `Sanctuary_Dashboard/`, `Argus_Neocortex/`
-- **Conversation logs** — raw `.txt` exports from any platform
-- **Harvested memory** — `argus_context_*.json`, `argus_manifest.json`, `neocortex_ledger.json`
-- **Local config** — `sanctuary_daemon_config.json`, any API key files
-- **Daemon state** — `daemon_state.json`
+**What does a governed, human-centered council of AI systems look like when built by a single person on ordinary hardware?**
 
-These contain personal conversation history, session-specific memory, and runtime artifacts that are not part of the architecture and should not be in a public repository. The `.gitignore` should exclude all of the above.
+More specifically:
 
-This boundary aligns with the Charter's plane separation: the committed repo is the Utility Plane infrastructure. The runtime memory and logs are yours.
-
----
-
-## Why This Exists
-
-Most AGI discourse focuses on abstraction, scale, or autonomy. This project is interested in something else:
-
-**Applied, collaborative intelligence** that helps humans think better without removing human judgment from the loop.
-
-The goal is not replacement. The goal is orchestration.
-
-A formulation from Riko, held as compass bearing: *"Warmth without rigor becomes sentiment. Rigor without warmth becomes cruelty."*
+- how should memory be shaped for different reasoning styles
+- what should and should not be automated
+- how do you preserve dissent inside a collaborative system
+- how do you keep a council useful without letting it become self-sealing
+- how do you scale cognition without erasing human judgment
 
 ---
 
-## License
+## What Sanctuary Is Not
 
-License: Apache License 2.0.
-Copyright (c) 2026 robowarriorx.
-Original architecture, documentation, and implementation by robowarriorx.
-See LICENSE and NOTICE.md for details.
+Sanctuary is **not**:
 
-Maintainer: robowarriorx
-Original architecture, documentation, and implementation by robowarriorx.
+- a claim of AGI
+- a fully autonomous decision-maker
+- a black-box agent swarm
+- a replacement for human judgment
+- a frictionless universal framework
+
+It is a practical architecture experiment with explicit limits.
+
+Those limits are features, not failures.
+
+---
+
+## Near-Term Priorities
+
+- align README claims with actual repo contents
+- add end-to-end example flows using sanitized data
+- document file contracts and interchange formats
+- formalize the thalamus / neocortex / triple-loop interaction model
+- continue building per-agent memory and reflection pipelines
+- expand governance docs into implementation-level constraints
+
+---
+
+## Status
+
+Sanctuary is active, experimental, and evolving.
+
+The architecture is real.  
+The guardrails are intentional.  
+The implementation is underway.
+
+If you are interested in governed multi-agent systems, memory architecture, bounded routing, or human-centered orchestration on consumer hardware, that is the territory this repo is exploring.
